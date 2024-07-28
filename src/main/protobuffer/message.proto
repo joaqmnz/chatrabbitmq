@@ -1,0 +1,20 @@
+syntax = "proto3";
+
+package ChatRabbitMQ;
+
+option java_package = "br.ufs.dcomp.ChatRabbitMQ";
+option java_outer_classname = "PadraoMensagem";
+
+message Mensagem{
+    string emissor = 1;
+    string data = 2;
+    string grupo = 3;
+    string hora = 4;
+    Conteudo conteudo = 5;
+}
+
+message Conteudo {
+    string tipo = 1;
+    bytes corpo = 2;
+    string nome = 3;
+}
